@@ -88,6 +88,36 @@ class _ElephantInfoScreenState extends State<ElephantInfoScreen> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
+                            const Text('Id: ',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red)),
+                            Text(
+                              _elephant.sId.toString(),
+                              style: const TextStyle(
+                                fontSize: 13,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            const Text('Index: ',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red)),
+                            Text(
+                              _elephant.index.toString(),
+                              style: const TextStyle(
+                                fontSize: 15,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
                             const Text('Nombre: ',
                                 style: TextStyle(
                                     fontSize: 16,
@@ -187,6 +217,36 @@ class _ElephantInfoScreenState extends State<ElephantInfoScreen> {
                               _elephant.dod,
                               style: const TextStyle(
                                 fontSize: 15,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            const Text('Wikilink: ',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red)),
+                            Text(
+                              _elephant.wikilink,
+                              style: const TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            const Text('Image: ',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red)),
+                            Text(
+                              _elephant.image,
+                              style: const TextStyle(
+                                fontSize: 14,
                               ),
                             ),
                           ],
