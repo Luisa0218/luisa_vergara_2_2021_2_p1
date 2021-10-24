@@ -27,6 +27,7 @@ class _ElephantInfoScreenState extends State<ElephantInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red[50],
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: Text('${_elephant.name.toUpperCase()}'),
@@ -67,7 +68,7 @@ class _ElephantInfoScreenState extends State<ElephantInfoScreen> {
                   width: 150,
                   placeholder: (context, url) => const Image(
                     image: NetworkImage(
-                        'https://www.kananss.com/wp-content/uploads/2021/06/51-519068_loader-loading-progress-wait-icon-loading-icon-png-1.png'),
+                        'https://www.pngitem.com/pimgs/m/296-2961253_loading-red-icon-png-transparent-png.png'),
                     fit: BoxFit.cover,
                     height: 150,
                     width: 150,

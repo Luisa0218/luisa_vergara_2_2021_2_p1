@@ -33,6 +33,7 @@ class _ElephantsScreenState extends State<ElephantsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red[400],
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const Text('Elefantes'),
@@ -136,7 +137,7 @@ class _ElephantsScreenState extends State<ElephantsScreen> {
                         width: 80,
                         placeholder: (context, url) => const Image(
                           image: NetworkImage(
-                              'https://www.kananss.com/wp-content/uploads/2021/06/51-519068_loader-loading-progress-wait-icon-loading-icon-png-1.png'),
+                              'https://www.pngitem.com/pimgs/m/296-2961253_loading-red-icon-png-transparent-png.png'),
                           fit: BoxFit.cover,
                           height: 80,
                           width: 80,
@@ -207,7 +208,8 @@ class _ElephantsScreenState extends State<ElephantsScreen> {
               TextButton(
                   onPressed: () => Navigator.of(context).pop(),
                   child: const Text('Cancelar')),
-              TextButton(onPressed: () => _filter(), child: Text('Filtrar')),
+              TextButton(
+                  onPressed: () => _filter(), child: const Text('Filtrar')),
             ],
           );
         });
@@ -227,6 +229,7 @@ class _ElephantsScreenState extends State<ElephantsScreen> {
 
     List<Elephant> filteredList = [];
     for (var elephant in _elephants) {
+      // ignore: unnecessary_null_comparison
       if (elephant.name != null) {
         if (elephant.name.toUpperCase().contains(_search.toUpperCase())) {
           filteredList.add(elephant);
