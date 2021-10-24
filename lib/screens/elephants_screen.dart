@@ -227,8 +227,10 @@ class _ElephantsScreenState extends State<ElephantsScreen> {
 
     List<Elephant> filteredList = [];
     for (var elephant in _elephants) {
-      if (elephant.name.toLowerCase().contains(_search.toLowerCase())) {
-        filteredList.add(elephant);
+      if (elephant.name != null) {
+        if (elephant.name.toUpperCase().contains(_search.toUpperCase())) {
+          filteredList.add(elephant);
+        }
       }
     }
 
